@@ -1,0 +1,37 @@
+{
+    "car_information": {
+        "car_brand": "RENAULT",
+        "car_fuel": "Diesel",
+        "car_model": "CLIO",
+        "car_purchaseSituation": "NUEVO"
+    },
+    "car_use": {
+        "use_carUse": "DIARIO",
+        "use_kmsYear": 10000,
+        "use_nightParking": "GARAJE_INDIVIDUAL"
+    },
+    "main_driver": {
+        "driver_birthDate": "1948-03-02",
+        "driver_birthPlace": "ESP",
+        "driver_id": "53990338T"
+    },
+    "occasional_driver": [
+        {
+            "occasionalDriver_birthDate": "1993-03-02",
+            "occasionalDriver_civilStatus": "SOLTERO",
+            "occasionalDriver_id": "01234567L"
+        }
+    ],
+    "holder": {
+        "holder": "CONDUCTOR_PRINCIPAL",
+        "holder_id": "",
+        "holder_birthDate": ""
+    },
+    "prevInsurance": {
+        "prevInsurance_company": "ALLIANZ",
+        "prevInsurance_companyYear": "8",
+        "prevInsurance_contractDate": "+30 days",
+        "prevInsurance_expirationDate":"2021-03-02",
+        "prevInsurance_years":"8"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "car_information": {
+        "car_brand": "SEAT",
+        "car_fuel": "GASOLINA",
+        "car_model": "IBIZA",
+        "car_purchaseSituation": "NUEVO"
+    },
+    "car_use": {
+        "use_carUse": "OCASIONAL",
+        "use_kmsYear": 6000,
+        "use_nightParking": "CALLE"
+    },
+    "main_driver": {
+        "driver_birthDate": "2002-06-05",
+        "driver_birthPlace": "ESP",
+        "driver_id": "36714791Y"
+    },
+    "occasional_driver": [],
+    "holder": {
+        "holder": "CONDUCTOR_PRINCIPAL",
+        "holder_id": "",
+        "holder_birthDate": ""
+    },
+    "prevInsurance": {
+        "prevInsurance_company": "",
+        "prevInsurance_companyYear": "",
+        "prevInsurance_contractDate": "",
+        "prevInsurance_expirationDate":"",
+        "prevInsurance_years":""
+    }
+}
