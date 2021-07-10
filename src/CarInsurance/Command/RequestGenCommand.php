@@ -7,12 +7,12 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-use App\CarInsurance\Service\CarInsuranceRequestService;
+use App\CarInsurance\Service\GenerateRequestService;
 
 class RequestGenCommand extends Command
 {
     protected static $defaultName = 'app:check24-car';
-    protected CarInsuranceRequestService $requestService;
+    protected GenerateRequestService $requestService;
 
     protected function configure(): void
     {
@@ -21,7 +21,7 @@ class RequestGenCommand extends Command
             ->addArgument('filename', InputArgument::REQUIRED, 'Car insurance file set of input parameters');
     }
 
-    public function __construct(CarInsuranceRequestService $requestService)
+    public function __construct(GenerateRequestService $requestService)
     {
         $this->requestService = $requestService;
         parent::__construct();

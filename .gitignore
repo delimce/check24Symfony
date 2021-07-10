@@ -12,3 +12,8 @@
 ###> tools ###
 .vscode/
 ###< tools ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###

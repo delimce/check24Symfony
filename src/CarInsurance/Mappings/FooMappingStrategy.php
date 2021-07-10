@@ -16,30 +16,32 @@ class FooMappingStrategy extends AbstractMappingStrategy
         $mappedData["FecCot"] = $this->getCurrentDateIso($originalData);
         $mappedData["FecEfecto"] = $this->getInsuranceSeniority($originalData);
         $mappedData["NroCondOca"] = $this->getTotalAdditionalDrivers($originalData);
-        $mappedData["SeguroEnVigor"] = $this->isAlreadyInsureDriver($originalData);
+        $mappedData["SeguroEnVigor"] = $this->isAlreadyInsuredDriver($originalData);
         return $mappedData;
     }
 
-    protected function isHolder(array $data): string
+    public function isHolder(array $data): string
     {
-        return ($data['holder']['holder'] === self::MAIN_DRIVER_OPTION) ? 'YES' : 'NO';
+        $isHolder = $data['holder']['holder'] ?? "";
+        return ($isHolder === self::MAIN_DRIVER_OPTION) ? 'YES' : 'NO';
     }
 
-    protected function isUniqueDriver(array $data): string
+    public function isUniqueDriver(array $data): string
     {
-        return (count($data['occasional_driver']) === 0) ? 'YES' : 'NO';
+        $isUnique = $data['occasional_driver'] ?? [];
+        return (count($isUnique) === 0) ? 'YES' : 'NO';
     }
 
-    protected function getTotalAdditionalDrivers(array $data): int
+    public function getTotalAdditionalDrivers(array $data): int
     {
-        return count($data['occasional_driver']);
+        $total = $data['occasional_driver'] ?? [];
+        return count($total);
     }
 
-    protected function isAlreadyInsureDriver(array $data): string
+    public function isAlreadyInsuredDriver(array $data): string
     {
         $result = false;
         $insuranceExpiration = $data["prevInsurance"]["prevInsurance_expirationDate"] ?? null;
-
         if ($insuranceExpiration) {
             $endDate = strtotime($insuranceExpiration);
             $currentDate = strtotime(date('Y-m-d'));
@@ -48,8 +50,10 @@ class FooMappingStrategy extends AbstractMappingStrategy
         return ($result) ? 'YES' : 'NO';
     }
 
-    protected function getInsuranceSeniority(array $data): int
+    public function getInsuranceSeniority(array $data): int
     {
-        return intval($data["prevInsurance"]["prevInsurance_years"]);
+        $result = $data["prevInsurance"]["prevInsurance_years"] ?? 0;
+        return intval($result);
+
     }
 }
