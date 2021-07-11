@@ -4,6 +4,7 @@ namespace App\Tests\CarInsurance;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use App\CarInsurance\Mappings\FooMappingStrategy;
+use App\Tests\Objects\CarInsuranceData as mockData;
 
 class FooMappingStrategyTest extends KernelTestCase
 {
@@ -11,10 +12,12 @@ class FooMappingStrategyTest extends KernelTestCase
     protected array $mandatoryMappingKeys;
     protected array $mockMappingData;
 
+    use mockData;
+
     protected function setUp(): void
     {
         self::bootKernel();
-        $this->mockMappingData = [];
+        $this->mockMappingData = $this->getData();
         $this->fooMapping = new FooMappingStrategy();
         $this->mandatoryMappingKeys = [
             'CondPpalEsTomador', 'ConductorUnico',
