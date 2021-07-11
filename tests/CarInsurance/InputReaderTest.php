@@ -42,14 +42,4 @@ class InputReaderTest extends KernelTestCase
         $this->assertArrayHasKey("prevInsurance", $this->reader->getObject());
     }
 
-    /**
-     * @test
-     */
-    public function testException()
-    {
-        $this->markTestSkipped('must be revisited.');
-        $this->expectException(InvalidArgumentException::class);
-        $this->reader = new InputJsonReader('undefined.json');
-        
-    }
 }
