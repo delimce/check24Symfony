@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Tests\CarInsurance;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;

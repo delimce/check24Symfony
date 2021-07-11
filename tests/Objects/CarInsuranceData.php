@@ -20,9 +20,15 @@ trait CarInsuranceData
             "driver_birthPlace" => "ESP",
             "driver_id" => "36714791Y"
         ],
-        "occasional_driver" => [],
+        "occasional_driver" => [
+            [
+                "occasionalDriver_birthDate" => "1993-03-02",
+                "occasionalDriver_civilStatus" => "SOLTERO",
+                "occasionalDriver_id" => "01234567L"
+            ]
+        ],
         "holder" => [
-            "holder" > "CONDUCTOR_PRINCIPAL",
+            "holder" => "CONDUCTOR_PRINCIPAL",
         ],
         "prevInsurance" => [
             "prevInsurance_company" => "ALLIANZ",
