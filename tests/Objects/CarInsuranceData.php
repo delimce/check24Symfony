@@ -39,8 +39,21 @@ trait CarInsuranceData
         ]
     ];
 
+    private $mappingKeys = [
+        'CondPpalEsTomador', 'ConductorUnico',
+        'FecCot', 'FecEfecto', 'NroCondOca', 'SeguroEnVigor'
+    ];
+
+
+
     public function getData(): array
     {
         return $this->data;
+    }
+
+
+    public function getMappingKeys(): array
+    {
+        return $this->mappingKeys;
     }
 }

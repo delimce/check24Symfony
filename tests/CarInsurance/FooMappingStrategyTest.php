@@ -19,10 +19,7 @@ class FooMappingStrategyTest extends KernelTestCase
         self::bootKernel();
         $this->mockMappingData = $this->getData();
         $this->fooMapping = new FooMappingStrategy();
-        $this->mandatoryMappingKeys = [
-            'CondPpalEsTomador', 'ConductorUnico',
-            'FecCot', 'FecEfecto', 'NroCondOca', 'SeguroEnVigor'
-        ];
+        $this->mandatoryMappingKeys = $this->getMappingKeys();
     }
 
     /**
