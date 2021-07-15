@@ -16,6 +16,7 @@
         "symfony/yaml": "5.3.*"
     },
     "require-dev": {
+        "behat/behat": "^3.8",
         "phpunit/phpunit": "^9.5"
     },
     "config": {
